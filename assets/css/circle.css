@@ -3,14 +3,35 @@ body { font-family: sans-serif; }
 .draggable {
   width: 100px;
   height: 100px;
-  background: #F90;
-  border-radius: 1000px;
+  border-radius:50%;
+  background: #8c7fed;
+  border-style: solid;
+  border-color:rgb(54, 170, 116);
+  border-radius: 1000px; 
+  line-height:6;
+  text-align:center;
+  float:left;
 }
+
+.main {
+  width: 350px;
+  height: 350px;
+  background: rgb(192,192,192);
+  border-radius: 1000px;    
+  float:right;
+}
+
 .draggable.is-pointer-down {
   background: #09F;
 }
 .draggable.is-dragging { opacity: 0.7; }
 
-.title {
-    padding: 35px
+.container {
+  padding: 10px;
+  border: 2px solid #F90;
+  height: 400px;
+}
+
+.submit {
+    float:right
 }
