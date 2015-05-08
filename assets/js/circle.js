@@ -1,3 +1,4 @@
+partid = '';
 circles = ['race', 'gender'];
 
 $(document).ready( function() {
@@ -9,3 +10,19 @@ $(document).ready( function() {
     containment: true
   });
 });
+
+function submit() {
+    
+    bootbox.alert('hello');
+}
+function getPartID() {
+    bootbox.prompt({
+        title: "Please enter participant ID:",
+        value: partid,
+        callback: function(result) {
+            if (result == '') {
+                getPartID();
+            }
+        }
+    });
+};

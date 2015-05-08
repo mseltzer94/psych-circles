@@ -6,10 +6,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.min.css"/>
+<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 <script src="assets/js/draggabilly.pkgd.min.js"></script>
+<script src="node_modules/bootbox/bootbox.min.js"></script> 
 
 <script src="assets/js/circle.js"></script>
-        <link rel="stylesheet" type="text/css" href="assets/css/circle.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/circle.css"/>
 
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -23,7 +25,7 @@
         </div>
     </nav>
 </head>
-    <body>
+    <body onload = "getPartID()">
     <button class="submit glyphicon glyphicon-question-sign" onclick = "submit()"> Finish</button>
     <div class="container">
        <div class="main"><div class=title></div></div>
