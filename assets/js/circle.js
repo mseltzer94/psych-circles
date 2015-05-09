@@ -16,29 +16,32 @@ Array.prototype.shuffle = function() {
 angular.module('psychCircles', ['draggabilly'])
   .controller('CircleController', ['$scope',
     function($scope, ModalService) {
-$scope.partid = '';
+$scope.partID;
 $scope.circles = [
     {"name":'Race', "question":"Enter a race: "},
     {"name":'Gender', "question":""}, 
     {"name":'Age', "question":""}];
-
 $scope.circles.shuffle();
+$scope.getPartID = function() {
+    bootbox.prompt({
+        title: "Please enter participant ID:",
+        value: $scope.partID,
+        callback: function(result) {
+            if (result == '') {
+                $scope.getPartID();
+            }
+        }
+    });
+};
+        
+// INITI
+$scope.getPartID();
     }]);
 
 
 
 function submit() {
     
-    bootbox.alert('hello');
+    bootbox.alert('Submit data...');
 }
-function getPartID() {
-    bootbox.prompt({
-        title: "Please enter participant ID:",
-        value: partid,
-        callback: function(result) {
-            if (result == '') {
-                getPartID();
-            }
-        }
-    });
-};
+
