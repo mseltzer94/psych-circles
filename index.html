@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="psychCircles">
 <head>
     
 <!-- jQuery -->
@@ -7,10 +7,18 @@
 <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.min.css"/>
 <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
-<script src="assets/js/draggabilly.pkgd.min.js"></script>
+<!--Angular-->
+<script type="text/javascript" src="assets/js/angular.min.js"></script>
+<!--draggabilly-->
+<script type="text/javascript" src="assets/js/draggabilly.pkgd.min.js"></script>
+<!--angular draggabilly-->
+<script type="text/javascript" src="bower_components/angular-draggabilly/dist/angular-draggabilly.min.js"></script>
+<!--bootbox-->
 <script src="node_modules/bootbox/bootbox.min.js"></script> 
 
+<!--main js file-->
 <script src="assets/js/circle.js"></script>
+<!--overall styling-->
 <link rel="stylesheet" type="text/css" href="assets/css/circle.css"/>
 
     <nav class="navbar navbar-default">
@@ -27,9 +35,12 @@
         </div>
     </nav>
 </head>
-    <body> <!-- onload = "getPartID()">-->
+    <body ng-controller="CircleController" > <!-- onload = "getPartID()">-->
     <div class="container">
-       <div class="main"><div class=title></div></div>
+        <!-- self bubble-->
+        <div class="main"><div class=title></div></div>
+        <div class = "draggable" draggabilly ng-repeat="circle in circles"><div class=title> {{circle.name}} </div></div>
+        
     </div>
         
     

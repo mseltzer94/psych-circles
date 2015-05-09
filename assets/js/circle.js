@@ -13,26 +13,18 @@ Array.prototype.shuffle = function() {
     return input;
 }
 
-partid = '';
-circles = [
+angular.module('psychCircles', ['draggabilly'])
+  .controller('CircleController', ['$scope',
+    function($scope, ModalService) {
+$scope.partid = '';
+$scope.circles = [
     {"name":'Race', "question":"Enter a race: "},
     {"name":'Gender', "question":""}, 
     {"name":'Age', "question":""}];
 
-circles.shuffle();
-$(document).ready( function() {
-  for (i = 0; i < circles.length; i++) {
-    $('.container').append('<div class="draggable"><div class=title>'+ circles[i].name+'</div></div>');
-  }
-    
-    var $draggable =$('.draggable').draggabilly({
-    containment: true
-  });
-$('.draggable').on( 'dragEnd', 
-              function( event, pointer ) {
-    alert('hello');
-    });
-});
+$scope.circles.shuffle();
+    }]);
+
 
 
 function submit() {
