@@ -44,11 +44,18 @@ $scope.prompt = function(idx) {
         }
     }); 
     }
+    console.log($('.draggable')[idx]);
+    console.log($('.draggable')[idx].style.left);
+    $scope.circles[idx].left = $('.draggable')[idx].style.left;
+     $scope.circles[idx].top = $('.draggable')[idx].style.top;
+    console.log($scope.circles);
     
 }
         
 // INIT
 $scope.getPartID();
+
+
         
     }]);
 
