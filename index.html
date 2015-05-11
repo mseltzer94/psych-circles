@@ -3,7 +3,7 @@
 <head>
     
 <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
 <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="bootstrap-3.3.4-dist/css/bootstrap.min.css"/>
 <script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
@@ -39,7 +39,7 @@
     <div class="container">
         <!-- self bubble-->
         <div class="main"><div class=title></div></div>
-        <div class = "draggable" draggabilly ng-repeat="circle in circles"><div class=title> {{circle.name}} </div></div>
+        <div class = "draggable" draggabilly ng-repeat="circle in circles"> <i ng-click = "prompt($index)"><div class=title> {{circle.name}} </div></i></div>
         
     </div>
         

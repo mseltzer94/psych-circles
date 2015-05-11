@@ -33,9 +33,23 @@ $scope.getPartID = function() {
         }
     });
 };
+$scope.prompt = function(idx) {
+    if ($scope.circles[idx].question != ''){
+        bootbox.prompt({
+        title: $scope.circles[idx].question,
+        value: $scope.circles[idx].questionresp,
+        callback: function(result) {
+            $scope.circles[idx].questionresp = result;
+            console.log($scope.circles);
+        }
+    }); 
+    }
+    
+}
         
-// INITI
+// INIT
 $scope.getPartID();
+        
     }]);
 
 
